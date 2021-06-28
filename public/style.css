@@ -6,8 +6,8 @@
 /* SECTION Imports                       */
 /*———————————————————————————————————————*/
 
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
 
 /*———————————————————————————————————————*/
 /* SECTION Elements                      */
@@ -36,8 +36,9 @@ body, html {
     --text-color-2: black;
 
     /* NOTE: Fonts. */
-    --font-family-1: 'Poiret One', cursive;
-    --font-family-2: 'Arima Madurai', cursive;
+    --font-family-1: ;
+    --font-family-2: 'Castoro', serif;
+    --font-family-3: 'Sulphur Point', sans-serif;
 }
 
 /*———————————————————————————————————————*/
@@ -63,6 +64,7 @@ body, html {
 
 #announcements h1 {
     margin: 0.5em;
+    margin-left: 2em;
 }
 
 #announcements a {
@@ -75,12 +77,13 @@ body, html {
     color: green;
 }
 
+/* SECTION: Nav-Bar */
 #navbar {
     width:         100%;
     height:        4em;
     top:           2.25em;
+    padding:       2em;
     position:      absolute;
-    border-bottom: 0.15em solid rgba(0, 0, 0, 0.4);
 }
 
 #navbar input[type=text] {
@@ -94,29 +97,69 @@ body, html {
 }
 
 #title {
-    width:    15em;
-    height:   4em;
-    position: absolute;
+    width:     15em;
+    height:    4em;
+    position:  absolute;
+    left:      50%;
+    transform: translateX(-50%);
 }
 
 #title-text {
-    margin: 0.5em;
+    margin-left: 0.75em;
+    position:    absolute;
+    bottom:      4.75em;
 }
 
+/* TODO: Rearrange everything. */
 #title img {
-    width:    4em;
-    height:   4em;
-    position: absolute;
+    width:         4em;
+    height:        4em;
+    position:      absolute;
+    left: 50%;
+    transform: translate(50%);
+    border:        2px solid black;
+    border-radius: 50%;
 }
 
 #title h1 {
-    font-family: var(--font-family-1);
+    font-family: var(--font-family-3);
     color:       var(--text-color-2);
-    margin-left: 2.5em;
+    position: absolute;
+    font-size:   2em;
+    margin-left: 2em;
+    width:       7em;
 }
 
 #title p {
     font-family: var(--font-family-2);
+}
+
+#title-buttons {
+    width:    60%;
+    color:    var(--text-color-2);
+    position: absolute;
+    top:      1.5em;
+    left:     20em;
+}
+
+#title-buttons ul {
+    list-style: none;
+}
+
+#title-buttons li {
+    display: inline-block;
+    padding: 1em;
+}
+
+#title-buttons a {
+    font-family: var(--font-family-2);
+    font-size:   1.5em;
+}
+
+#title-buttons a:hover {
+    border-bottom: 0.1em solid black;
+    border-top:    0.1em solid black;
+    cursor:        pointer;
 }
 
 /*———————————————————————————————————————*/
@@ -125,7 +168,6 @@ body, html {
 
 @media screen and (max-width: 1000px) {
     #title {
-        left: 10em;
     }
 
     
