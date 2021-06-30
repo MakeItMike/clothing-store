@@ -109,7 +109,7 @@ body, html {
 }
 
 #navbar input:focus {
-    border-bottom: 0.1em solid blue;
+    border-bottom: 0.1em solid #14BDEB;
 }
 
 /* SECTION: Title */
@@ -195,9 +195,17 @@ body, html {
 /*———————————————————————————————————————*/
 
 @media screen and (max-width: 1000px) {
-    #title {
+    #title h1 {
+        display: none;
     }
 
+    #title image {
+        width: 4em;
+        height: 4em;
+        position: absolute;
+        left: 2em;
+        top: 2em;
+    }
     
 }
 
