@@ -12,9 +12,11 @@
 /*———————————————————————————————————————*/
 /* SECTION Elements                      */
 /*———————————————————————————————————————*/
+    
+body {animation: fadeIn 1s;}
 
 body, html {
-    background-color: var(--background-color);
+    background-color: black;
     color:            var(--text-color-1);
     width:            100%;
     height:           100%;
@@ -28,12 +30,13 @@ body, html {
 :root {
     /* NOTE: Background colors. */
     --background-color-1: rgb(17, 17, 17);
-    --background-color-2: rgb(44, 44, 55);
+    --background-color-2: rgb(35, 35, 49);
 
 
     /* NOTE: Text colors. */
     --text-color-1: white;
     --text-color-2: black;
+    --text-color-3: rgba(255, 255, 255, 0.5);
 
     /* NOTE: Fonts. */
     --font-family-1: ;
@@ -52,6 +55,7 @@ body, html {
 /*———————————————————————————————————————*/
 
 /* NOTE: Page 1. */
+/* SECTION: Announcements */
 #announcements {
     width:            100%;
     height:           3.5em;
@@ -80,66 +84,87 @@ body, html {
 /* SECTION: Nav-Bar */
 #navbar {
     width:         100%;
-    height:        4em;
+    height:        15em;
     top:           2.25em;
     padding:       2em;
     position:      absolute;
 }
 
+/* SECTION: Search-Bar */
 #navbar input[type=text] {
-    padding:      6px;
-    border:       0.1em solid black;
-    top:          1em;
-    right:        5em;
-    position:     absolute;
-    font-size:    1em;
-    outline:      none;
+    padding:       6px;
+    border:        none;
+    border-bottom: 0.1em solid white;
+    width:         30em;
+    color:         var(--text-color-1);
+    background:    none;
+    top:           1em;
+    left:          50%;
+    transform:     translateX(-50%);
+    top:           25em;
+    position:      absolute;
+    font-size:     1em;
+    outline:       none;
+    text-align: center;
 }
 
+#navbar input:focus {
+    border-bottom: 0.1em solid blue;
+}
+
+/* SECTION: Title */
 #title {
-    width:     15em;
-    height:    4em;
+    width:     auto;
     position:  absolute;
     left:      50%;
+    top:       8em;
     transform: translateX(-50%);
 }
 
-#title-text {
-    margin-left: 0.75em;
-    position:    absolute;
-    bottom:      4.75em;
+#title:hover {
+    cursor: pointer;
 }
 
-/* TODO: Rearrange everything. */
+#title a {
+    text-decoration: none;
+}
+
+/* TODO: Re-arrange everything. */
 #title img {
-    width:         4em;
-    height:        4em;
-    position:      absolute;
-    left: 50%;
-    transform: translate(50%);
-    border:        2px solid black;
+    width:         8em;
+    height:        8em;
+    border:        2px solid white;
     border-radius: 50%;
+    left:          50%;
+    transform:     translateX(-50%);
+    bottom:        6.5em;
+    position:      absolute;
 }
 
 #title h1 {
     font-family: var(--font-family-3);
-    color:       var(--text-color-2);
-    position: absolute;
-    font-size:   2em;
-    margin-left: 2em;
-    width:       7em;
-}
-
-#title p {
-    font-family: var(--font-family-2);
+    color:       var(--text-color-1);
+    font-size:   3em;
+    text-align:  center;
+    user-select: none;
 }
 
 #title-buttons {
-    width:    60%;
-    color:    var(--text-color-2);
-    position: absolute;
-    top:      1.5em;
-    left:     20em;
+    width:        60%;
+    color:        var(--text-color-3);
+    position:     absolute;
+    width:        50em;
+    top:          15em;
+    left:         50%;
+    transform:    translateX(-50%);
+    border-left:  0.1em solid white;
+    border-right: 0.1em solid white;
+
+    /* TODO: Moving bar UI.
+    animation: barsMove 2s;
+    animation-delay:    2s;
+    display:            block;
+    */
 }
 
 #title-buttons ul {
@@ -152,13 +177,16 @@ body, html {
 }
 
 #title-buttons a {
-    font-family: var(--font-family-2);
-    font-size:   1.5em;
+    font-family:     var(--font-family-2);
+    font-size:       1.5em;
+    color:           var(--text-color-3);
+    text-decoration: none;
 }
 
 #title-buttons a:hover {
-    border-bottom: 0.1em solid black;
-    border-top:    0.1em solid black;
+    border-bottom: 0.1em solid white;
+    border-top:    0.1em solid white;
+    color:         var(--text-color-1);
     cursor:        pointer;
 }
 
@@ -172,3 +200,39 @@ body, html {
 
     
 }
+
+/*———————————————————————————————————————*/
+/* SECTION Keyframes                     */
+/*———————————————————————————————————————*/
+
+@keyframes fadeIn {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+
+/* TODO: Moving bar UI.
+@keyframes barsMove {
+    0% {width: 0; opacity: 0;}
+    100% {width: 50em; opacity: 1;}
+}
+*/
+
+/* NOTE: Moving background-color gradient.
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+*/
