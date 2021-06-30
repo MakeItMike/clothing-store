@@ -42,12 +42,16 @@ body, html {
     --font-family-1: ;
     --font-family-2: 'Castoro', serif;
     --font-family-3: 'Sulphur Point', sans-serif;
+
+    /* NOTE: Misc colors. */
+    --blue: #14BDEB;
 }
 
 /*———————————————————————————————————————*/
 /* SECTION Classes                       */
 /*———————————————————————————————————————*/
 
+/* SECTION: Search-Bar */
 
 
 /*———————————————————————————————————————*/
@@ -109,8 +113,43 @@ body, html {
 }
 
 #navbar input:focus {
-    border-bottom: 0.1em solid #14BDEB;
+    border-bottom: 0.1em solid var(--blue);
 }
+
+#product-list {
+    width:            30em;
+    padding:          1em;
+    height:           auto;
+    position:         absolute;
+    left:             50%;
+    transform:        translateX(-50%);
+    top:              26.5em;
+    background-color: rgba(37, 33, 33, 0.25);
+    border:           0.1em solid var(--blue);
+    list-style:       none;
+    display:  /* NOTE: Get rid of later. */
+}
+
+/* NOTE: !!!TESTING!!! */
+    #product-list li {
+        border-bottom: 0.1em solid white;
+    }
+
+    #product-list li:hover {
+        color: var(--blue);
+        cursor: pointer;
+    }
+
+    .title-test {
+        font-family: var(--font-family-3);
+    }
+
+    .desc-test {
+        font-family: var(--font-family-2);
+    }
+
+/* NOTE: !!!TESTING!!! */
+
 
 /* SECTION: Title */
 #title {
@@ -129,11 +168,11 @@ body, html {
     text-decoration: none;
 }
 
-/* TODO: Re-arrange everything. */
+/* TODO: Re-organize everything. */
 #title img {
     width:         8em;
     height:        8em;
-    border:        2px solid white;
+    border:        0.2em solid white;
     border-radius: 50%;
     left:          50%;
     transform:     translateX(-50%);
@@ -160,7 +199,7 @@ body, html {
     border-left:  0.1em solid white;
     border-right: 0.1em solid white;
 
-    /* TODO: Moving bar UI.
+    /* TODO: Moving bar | <- text -> | UI.
     animation: barsMove 2s;
     animation-delay:    2s;
     display:            block;
@@ -199,9 +238,9 @@ body, html {
         display: none;
     }
 
-    #title image {
-        width: 4em;
-        height: 4em;
+    #title img {
+        width: 6em;
+        height: 6em;
         position: absolute;
         left: 2em;
         top: 2em;
@@ -226,7 +265,7 @@ body, html {
 */
 
 /* NOTE: Moving background-color gradient.
-body {
+#product-list {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
