@@ -30,8 +30,7 @@ body, html {
 :root {
     /* NOTE: Background colors. */
     --background-color-1: rgb(17, 17, 17);
-    --background-color-2: rgb(35, 35, 49);
-
+    --background-color-2: rgba(37, 33, 33, 0.25);
 
     /* NOTE: Text colors. */
     --text-color-1: white;
@@ -65,7 +64,7 @@ body, html {
     height:           3.5em;
     position:         absolute;
     color:            var(--text-color-1);
-    background-color: var(--background-color-2);
+    background-color: var(--background-color-1);
     font-family:      var(--font-family-2);
     font-size:        0.65em;
 }
@@ -82,7 +81,7 @@ body, html {
 
 /* TODO: Sign-up hover animation. */
 #announcements a:hover {
-    color: green;
+    color: var(--blue);
 }
 
 /* SECTION: Nav-Bar */
@@ -109,7 +108,7 @@ body, html {
     position:      absolute;
     font-size:     1em;
     outline:       none;
-    text-align: center;
+    text-align:    center;
 }
 
 #navbar input:focus {
@@ -124,10 +123,9 @@ body, html {
     left:             50%;
     transform:        translateX(-50%);
     top:              26.5em;
-    background-color: rgba(37, 33, 33, 0.25);
+    background-color: var(--background-color-2);
     border:           0.1em solid var(--blue);
     list-style:       none;
-    display:  /* NOTE: Get rid of later. */
 }
 
 /* NOTE: !!!TESTING!!! */
@@ -136,8 +134,27 @@ body, html {
     }
 
     #product-list li:hover {
-        color: var(--blue);
+        color:  var(--blue);
         cursor: pointer;
+    }
+
+    .product-image {
+        width:            10em;
+        height:           10em;
+        position:         relative;
+        left:             15em;
+        top:              1em;
+        padding:          1em;
+        border:           0.1em solid var(--blue);
+        background-color: var(--background-color-2);
+    }
+
+    .image-label {
+        position: relative;
+        left: 6.5em;
+        top: 3em;
+        border: 0.1em solid var(--blue);
+        padding: 0.75em;
     }
 
     .title-test {
@@ -239,11 +256,11 @@ body, html {
     }
 
     #title img {
-        width: 6em;
-        height: 6em;
+        width:    6em;
+        height:   6em;
         position: absolute;
-        left: 2em;
-        top: 2em;
+        left:     2em;
+        top:      2em;
     }
     
 }
