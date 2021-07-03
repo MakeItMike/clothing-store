@@ -9,6 +9,13 @@
 /* SECTION Elements                      */
 /*———————————————————————————————————————*/
 
+body, html {
+    background-color: black;
+    color:            var(--text-color-1);
+    width:            100%;
+    height:           100%;
+    margin:           0;
+}
 
 /*———————————————————————————————————————*/
 /* SECTION Variables                     */
