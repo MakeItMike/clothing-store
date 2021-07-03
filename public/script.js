@@ -54,19 +54,15 @@ function searchBar(key) {
             productTitle.classList.add("product-title");
             productDesc.classList.add("product-desc");
 
-
             productElement.appendChild(productImg, productTitle, productDesc); // Puts img, h1, & p element inside li element.
             productLi.appendChild(productElement); // Puts productElement div inside li.
-            productListElement.appendChild(productLi);    // Puts li element inside ul element.
+            productListElement.appendChild(productLi); // Puts li element inside ul element.
 
             // Adds actual text into created elements.
             productTitle.innerHTML = productList.product1.name;
             productDesc.innerHTML  = productList.product1.desc;
-
-
         }
     }
-
 }
 
 //———————————————————————————————————————//

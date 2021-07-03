@@ -1,0 +1,70 @@
+/*———————————————————————————————————————*/
+/* SECTION Imports                       */
+/*———————————————————————————————————————*/
+
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+
+/*———————————————————————————————————————*/
+/* SECTION Elements                      */
+/*———————————————————————————————————————*/
+
+body, html {
+    background-color: black;
+    color:            var(--text-color-1);
+    width:            100%;
+    height:           100%;
+    margin:           0;
+}
+
+body {animation: fadeIn 1s;}
+
+/*———————————————————————————————————————*/
+/* SECTION Variables                     */
+/*———————————————————————————————————————*/
+
+:root {
+    /* NOTE: Background colors. */
+    --background-color-1: rgb(17, 17, 17);
+    --background-color-2: rgba(37, 33, 33, 0.25);
+
+    /* NOTE: Text colors. */
+    --text-color-1: white;
+    --text-color-2: black;
+    --text-color-3: rgba(255, 255, 255, 0.5);
+
+    /* NOTE: Fonts. */
+    --font-family-1: ;
+    --font-family-2: 'Castoro', serif;
+    --font-family-3: 'Sulphur Point', sans-serif;
+
+    /* NOTE: Misc colors. */
+    --blue: #14BDEB;
+}
+
+/*———————————————————————————————————————*/
+/* SECTION Classes                       */
+/*———————————————————————————————————————*/
+
+
+
+/*———————————————————————————————————————*/
+/* SECTION Id's                          */
+/*———————————————————————————————————————*/
+
+
+
+/*———————————————————————————————————————*/
+/* SECTION Media Queries                 */
+/*———————————————————————————————————————*/
+
+
+
+/*———————————————————————————————————————*/
+/* SECTION Keyframes                     */
+/*———————————————————————————————————————*/
+
+@keyframes fadeIn {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}

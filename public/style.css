@@ -52,7 +52,6 @@ body, html {
 
 /* SECTION: Search-Bar */
 
-
 /*———————————————————————————————————————*/
 /* SECTION Id's                          */
 /*———————————————————————————————————————*/
@@ -124,7 +123,7 @@ body, html {
     transform:        translateX(-50%);
     top:              26.5em;
     background-color: var(--background-color-2);
-    border:           0.1em solid var(--blue);
+    border:           0.1em solid white;
     list-style:       none;
 }
 
@@ -145,7 +144,7 @@ body, html {
         left:             15em;
         top:              1em;
         padding:          1em;
-        border:           0.1em solid var(--blue);
+        border:           0.1em solid white;
         background-color: var(--background-color-2);
     }
 
@@ -153,7 +152,7 @@ body, html {
         position: relative;
         left: 6.5em;
         top: 3em;
-        border: 0.1em solid var(--blue);
+        border: 0.1em solid white;
         padding: 0.75em;
     }
 
@@ -216,11 +215,9 @@ body, html {
     border-left:  0.1em solid white;
     border-right: 0.1em solid white;
 
-    /* TODO: Moving bar | <- text -> | UI.
+    /* TODO: Moving bar | <- text -> | UI. */
     animation: barsMove 2s;
     animation-delay:    2s;
-    display:            block;
-    */
 }
 
 #title-buttons ul {
@@ -269,17 +266,22 @@ body, html {
 /* SECTION Keyframes                     */
 /*———————————————————————————————————————*/
 
+/* SECTION Page Transitions */
 @keyframes fadeIn {
     0%   {opacity:0;}
     100% {opacity:1;}
 }
 
-/* TODO: Moving bar UI.
+@keyframes fadeOut {
+    0%   {opacity:1;}
+    100% {opacity:0;}
+}
+
+/* TODO: Moving bar UI. */
 @keyframes barsMove {
     0% {width: 0; opacity: 0;}
     100% {width: 50em; opacity: 1;}
 }
-*/
 
 /* NOTE: Moving background-color gradient.
 #product-list {
