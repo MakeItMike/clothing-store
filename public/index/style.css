@@ -277,11 +277,13 @@ body, html {
     100% {opacity:0;}
 }
 
-/* TODO: Moving bar UI. */
+/* TODO: Moving bar UI.
 @keyframes barsMove {
     0% {width: 0; opacity: 0;}
     100% {width: 50em; opacity: 1;}
 }
+
+*/
 
 /* NOTE: Moving background-color gradient.
 #product-list {
