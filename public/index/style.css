@@ -215,13 +215,14 @@ body, html {
     border-left:  0.1em solid white;
     border-right: 0.1em solid white;
 
-    /* TODO: Moving bar | <- text -> | UI. */
+    /* TODO: Moving bar | <- Title -> | UI. */
     animation: barsMove 2s;
     animation-delay:    2s;
 }
 
 #title-buttons ul {
     list-style: none;
+    padding-left: 20px;
 }
 
 #title-buttons li {

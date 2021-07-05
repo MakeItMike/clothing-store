@@ -54,19 +54,19 @@ body, html {
 }
 
 .clothing-images {
-    width: 55%;
-    height: 55%;
-    position: relative;
-    left: 50%;
+    width:     55%;
+    height:    55%;
+    position:  relative;
+    left:      50%;
     transform: translateX(-50%);
 }
 
 .clothing-title {
     font-family: var(--font-family-3);
-    color: var(--text-color-3);
-    position: relative;
-    max-width: 13em;
-    max-height: auto;
+    color:       var(--text-color-3);
+    position:    relative;
+    max-width:   13em;
+    max-height:  auto;
 }
 
 /*———————————————————————————————————————*/
@@ -75,22 +75,22 @@ body, html {
 
 /* NOTE: Title */
 #title {
-    width: 20em;
-    height: 15em;
+    width:      20em;
+    height:     15em;
     text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 1em;
-    transform: translateX(-50%);
+    position:   absolute;
+    left:       50%;
+    top:        1em;
+    transform:  translateX(-50%);
 }
 
 #title h1 {
-    color: white;
-    font-family: var(--font-family-2);
-    border-top: 0.1em solid white;
+    color:         white;
+    font-family:   var(--font-family-2);
+    border-top:    0.1em solid white;
     border-bottom: 0.1em solid white;
-    position: relative;
-    top: 5em;
+    position:      relative;
+    top:           5em;
 }
 
 #title img {
@@ -110,31 +110,26 @@ body, html {
 
 #title h3 {
     font-family: var(--font-family-2);
-    position: relative;
-    top: 6em;
+    position:    relative;
+    top:         6em;
 }
 
 /* NOTE: Clothing Grid */
 #clothing-grid {
-    display: grid;
-    width: auto;
-    position: absolute;
-    top: 18em;
-    left: 50%;
-    transform: translateX(-50%);
-    display: grid;
+    display:               grid;
+    width:                 auto;
+    position:              absolute;
+    top:                   18em;
+    left:                  50%;
+    transform:             translateX(-50%);
+    display:               grid;
     grid-template-columns: auto auto auto;
-    column-gap: 1em;
-    row-gap: 1em;
+    column-gap:            1em;
+    row-gap:               1em;
 }
 
 /* NOTE: Side Nav */
-#side-nav {
-    position: absolute;
-    top: 15em;
-    width: 10em;
-    height: 15em;
-}
+
 
 /*———————————————————————————————————————*/
 /* SECTION Media Queries                 */
