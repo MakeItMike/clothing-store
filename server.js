@@ -1,3 +1,7 @@
+// Allow relative paths when requiring.
+process.env.NODE_PATH = __dirname;
+require("module").Module._initPaths();
+
 // Get readline module.
 const readline = require('readline').createInterface({input: process.stdin, output: process.stdout});
 
@@ -11,8 +15,14 @@ process.on('uncaughtException', function (err) {
 	shutdown(); // Shut down the server.
 });
 
-// Use the Express-static middleware.
-app.use(express.static("public"));
+// Serve the globally-used static website files.
+app.use("/index", express.static("public/index"));
+app.use("/new-arrivals", express.static("public/pages/new-arrivals"));
+app.use("/men", express.static("public/pages/men"));
+app.use("/women", express.static("public/pages/women"));
+app.use("/boys", express.static("public/pages/boys"));
+app.use("/girls", express.static("public/pages/girls"));
+app.use("/gender-neutral", express.static("public/pages/gender-neutral"));
 
 // Start the server listening for requests.
 let server = app.listen(process.env.PORT || 3000, () => console.log("SERVER OPEN ON PORT " + (process.env.PORT || 3000)));
