@@ -1,0 +1,23 @@
+{
+  "name": "clothing-store",
+  "version": "1.0.0",
+  "description": "A front-end demonstration of what I can do.",
+  "main": "server.js",
+  "scripts": {
+    "test": "start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakeItMike/clothing-store.git"
+  },
+  "author": "Michael Woodyard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MakeItMike/clothing-store/issues"
+  },
+  "homepage": "https://github.com/MakeItMike/clothing-store#readme",
+  "dependencies": {
+    "express.js": "^1.0.0"
+  }
+}
