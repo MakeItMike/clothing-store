@@ -49,8 +49,10 @@ body, html {
     max-width: 13em;
 }
 
-.grid-item:hover {
+.grid-item:hover, .grid-item:hover h3 {
     cursor: pointer;
+    color: var(--text-color-1);
+    text-decoration: underline;
 }
 
 .clothing-images {
@@ -90,7 +92,7 @@ body, html {
     border-top:    0.1em solid white;
     border-bottom: 0.1em solid white;
     position:      relative;
-    top:           5em;
+    top:           5.5em;
 }
 
 #title img {
@@ -111,7 +113,7 @@ body, html {
 #title h3 {
     font-family: var(--font-family-2);
     position:    relative;
-    top:         6em;
+    top:         6.5em;
 }
 
 /* NOTE: Clothing Grid */
@@ -119,18 +121,59 @@ body, html {
     display:               grid;
     width:                 auto;
     position:              absolute;
-    top:                   18em;
+    top:                   25em;
     left:                  50%;
+    width:                 48em;
     transform:             translateX(-50%);
     display:               grid;
     grid-template-columns: auto auto auto;
+    border-left:           0.1em solid white;
+    border-right:          0.1em solid white;
+    padding:               1em;
     column-gap:            1em;
     row-gap:               1em;
 }
 
-/* NOTE: Side Nav */
+/* NOTE: Title Buttons */
+#title-buttons {
+    width:        60%;
+    color:        var(--text-color-3);
+    position:     absolute;
+    width:        50em;
+    top:          15em;
+    left:         50%;
+    transform:    translateX(-50%);
+    border-left:  0.1em solid white;
+    border-right: 0.1em solid white;
 
+    /* TODO: Moving bar | <- Title -> | UI. */
+    animation: barsMove 2s;
+    animation-delay:    2s;
+}
 
+#title-buttons ul {
+    list-style:   none;
+    padding-left: 20px;
+}
+
+#title-buttons li {
+    display: inline-block;
+    padding: 1em;
+}
+
+#title-buttons a {
+    font-family:     var(--font-family-2);
+    font-size:       1.5em;
+    color:           var(--text-color-3);
+    text-decoration: none;
+}
+
+#title-buttons a:hover {
+    border-bottom: 0.1em solid white;
+    border-top:    0.1em solid white;
+    color:         var(--text-color-1);
+    cursor:        pointer;
+}
 /*———————————————————————————————————————*/
 /* SECTION Media Queries                 */
 /*———————————————————————————————————————*/
