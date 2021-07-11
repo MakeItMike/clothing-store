@@ -42,6 +42,9 @@ body, html {
     --font-family-2: 'Castoro', serif;
     --font-family-3: 'Sulphur Point', sans-serif;
 
+    /* NOTE: Borders. */
+    --border-1: 0.1em solid white;
+
     /* NOTE: Misc colors. */
     --blue: #14BDEB;
 }
@@ -62,25 +65,57 @@ body, html {
     width:            100%;
     height:           3.5em;
     position:         absolute;
-    color:            var(--text-color-1);
+    color:            var(--text-color-3);
     background-color: var(--background-color-1);
     font-family:      var(--font-family-2);
     font-size:        0.65em;
+    letter-spacing:   0.1em;
 }
 
 #announcements h1 {
-    margin: 0.5em;
+    margin:      0.5em;
     margin-left: 2em;
 }
 
 #announcements a {
     text-decoration: underline;
-    color:           var(--text-color-1);
+    color:           var(--text-color-3);
 }
 
 /* TODO: Sign-up hover animation. */
 #announcements a:hover {
-    color: var(--blue);
+    color: var(--text-color-1);
+}
+
+/* SECTION: Signup Login Box */
+#signup-login {
+    position: absolute;
+    right:    2em;
+    top:      2em;
+    z-index:  1;
+    font-family: var(--font-family-2);
+}
+
+#signup-login ul {
+    list-style:   none;
+    padding-left: 0;
+    margin:       none;
+}
+
+#signup-login li {
+    display: inline-block;
+    padding: 1em;
+}
+
+#signup-login a {
+    text-decoration: none;
+    color:           var(--text-color-3);
+    font-size:       1.25em;
+}
+
+#signup-login a:hover {
+    color: var(--text-color-1);
+    cursor: pointer;
 }
 
 /* SECTION: Nav-Bar */
@@ -90,13 +125,14 @@ body, html {
     top:           2.25em;
     padding:       2em;
     position:      absolute;
+    z-index:       0;
 }
 
 /* SECTION: Search-Bar */
 #navbar input[type=text] {
     padding:       6px;
     border:        none;
-    border-bottom: 0.1em solid white;
+    border-bottom: var(--border-1);
     width:         30em;
     color:         var(--text-color-1);
     background:    none;
@@ -123,13 +159,13 @@ body, html {
     transform:        translateX(-50%);
     top:              26.5em;
     background-color: var(--background-color-2);
-    border:           0.1em solid white;
+    border:           var(--border-1);
     list-style:       none;
 }
 
 /* NOTE: !!!TESTING!!! */
     #product-list li {
-        border-bottom: 0.1em solid white;
+        border-bottom: var(--border-1);
     }
 
     #product-list li:hover {
@@ -144,16 +180,21 @@ body, html {
         left:             15em;
         top:              1em;
         padding:          1em;
-        border:           0.1em solid white;
+        border:           var(--border-1);
         background-color: var(--background-color-2);
     }
-
+/* TODO: Figure out a good styling for the price-tag! */
     .image-label {
-        position: relative;
-        left: 6.5em;
-        top: 3em;
-        border: 0.1em solid white;
-        padding: 0.75em;
+        position:      relative;
+        top:           2.6em;
+        display:       inline-block;
+        width:         9.75em;
+        left: 2.5em;
+        text-align:    center;
+        border-left:   var(--border-1);
+        border-right:  var(--border-1);
+        border-bottom: var(--border-1);
+        padding:       0.75em;
     }
 
     .title-test {
@@ -212,8 +253,8 @@ body, html {
     top:          15em;
     left:         50%;
     transform:    translateX(-50%);
-    border-left:  0.1em solid white;
-    border-right: 0.1em solid white;
+    border-left:  var(--border-1);
+    border-right: var(--border-1);
 
     /* TODO: Moving bar | <- Title -> | UI. */
     animation: barsMove 2s;
@@ -238,8 +279,8 @@ body, html {
 }
 
 #title-buttons a:hover {
-    border-bottom: 0.1em solid white;
-    border-top:    0.1em solid white;
+    border-bottom: var(--border-1);
+    border-top:    var(--border-1);
     color:         var(--text-color-1);
     cursor:        pointer;
 }
