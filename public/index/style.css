@@ -8,6 +8,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
 
 /*———————————————————————————————————————*/
 /* SECTION Elements                      */
@@ -31,6 +32,7 @@ body, html {
     /* NOTE: Background colors. */
     --background-color-1: rgb(17, 17, 17);
     --background-color-2: rgba(37, 33, 33, 0.25);
+    --background-color-3: white;
 
     /* NOTE: Text colors. */
     --text-color-1: white;
@@ -38,12 +40,13 @@ body, html {
     --text-color-3: rgba(255, 255, 255, 0.5);
 
     /* NOTE: Fonts. */
-    --font-family-1: ;
+    --font-family-1: 'Cormorant', serif;
     --font-family-2: 'Castoro', serif;
     --font-family-3: 'Sulphur Point', sans-serif;
 
     /* NOTE: Borders. */
     --border-1: 0.1em solid white;
+    --border-2: 0.1em solid rgba(255, 255, 255, 0.5);
 
     /* NOTE: Misc colors. */
     --blue: #14BDEB;
@@ -67,9 +70,8 @@ body, html {
     position:         absolute;
     color:            var(--text-color-3);
     background-color: var(--background-color-1);
-    font-family:      var(--font-family-2);
-    font-size:        0.65em;
-    letter-spacing:   0.1em;
+    font-family:      var(--font-family-1);
+    font-size:        0.85em;
 }
 
 #announcements h1 {
@@ -89,11 +91,11 @@ body, html {
 
 /* SECTION: Signup Login Box */
 #signup-login {
-    position: absolute;
-    right:    2em;
-    top:      2em;
-    z-index:  1;
-    font-family: var(--font-family-2);
+    position:    absolute;
+    right:       2em;
+    top:         2em;
+    z-index:     1;
+    font-family: var(--font-family-1);
 }
 
 #signup-login ul {
@@ -110,11 +112,11 @@ body, html {
 #signup-login a {
     text-decoration: none;
     color:           var(--text-color-3);
-    font-size:       1.25em;
+    font-size:       1.5em;
 }
 
 #signup-login a:hover {
-    color: var(--text-color-1);
+    color:  var(--text-color-1);
     cursor: pointer;
 }
 
@@ -159,18 +161,35 @@ body, html {
     transform:        translateX(-50%);
     top:              26.5em;
     background-color: var(--background-color-2);
-    border:           var(--border-1);
+    border:           var(--border-2);
     list-style:       none;
 }
 
 /* NOTE: !!!TESTING!!! */
     #product-list li {
-        border-bottom: var(--border-1);
+        border-bottom: var(--border-2);
+        color:         var(--text-color-3);
     }
 
     #product-list li:hover {
-        color:  var(--blue);
+        color:  var(--text-color-1);
         cursor: pointer;
+    }
+
+    #product-list-button a {
+        width:    1em;
+        height:   1em;
+        position: absolute;
+        right:    0em;
+        top: -0.05em;
+        border-left: var(--border-2);
+        border-bottom: var(--border-2);
+        z-index:  1;
+    }
+
+    /* NOTE: This is to re-arrange the displayed products in the search like this: | | | . */
+    #product-list-button a:hover {
+        background-color: var(--background-color-3);
     }
 
     .product-image {
@@ -186,15 +205,15 @@ body, html {
 /* TODO: Figure out a good styling for the price-tag! */
     .image-label {
         position:      relative;
-        top:           2.6em;
+        top:           2.8em;
         display:       inline-block;
-        width:         9.75em;
-        left: 2.5em;
+        width:         10em;
+        left:          2.55em;
         text-align:    center;
         border-left:   var(--border-1);
         border-right:  var(--border-1);
         border-bottom: var(--border-1);
-        padding:       0.75em;
+        padding:       1em;
     }
 
     .title-test {
@@ -213,7 +232,7 @@ body, html {
     width:     auto;
     position:  absolute;
     left:      50%;
-    top:       8em;
+    top:       7.5em;
     transform: translateX(-50%);
 }
 
@@ -229,28 +248,28 @@ body, html {
 #title img {
     width:         8em;
     height:        8em;
-    border:        0.2em solid white;
+    border:        var(--border-1);
     border-radius: 50%;
     left:          50%;
     transform:     translateX(-50%);
-    bottom:        6.5em;
+    bottom:        7.5em;
     position:      absolute;
 }
 
 #title h1 {
-    font-family: var(--font-family-3);
+    font-family: var(--font-family-1);
     color:       var(--text-color-1);
-    font-size:   3em;
+    font-size:   3.5em;
     text-align:  center;
     user-select: none;
+    font-weight: 300;
 }
 
 #title-buttons {
-    width:        60%;
     color:        var(--text-color-3);
     position:     absolute;
-    width:        50em;
-    top:          15em;
+    width:        60em;
+    top:          16em;
     left:         50%;
     transform:    translateX(-50%);
     border-left:  var(--border-1);
@@ -263,7 +282,8 @@ body, html {
 
 #title-buttons ul {
     list-style:   none;
-    padding-left: 20px;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
 }
 
 #title-buttons li {
@@ -272,8 +292,8 @@ body, html {
 }
 
 #title-buttons a {
-    font-family:     var(--font-family-2);
-    font-size:       1.5em;
+    font-family:     var(--font-family-1);
+    font-size:       2em;
     color:           var(--text-color-3);
     text-decoration: none;
 }
