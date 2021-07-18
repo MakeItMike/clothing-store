@@ -67,17 +67,14 @@ function searchBar(key) {
 
 // TODO: Figure out a better way to go about toggling the way the searchbar products look.
 function productToggle(num) {
-    let firstPage = document.getElementById("product-list");
-    let secondPage = document.getElementById("product-list-toggle");
+    let productPage = document.getElementById("product-list");
     switch(num) {
         case 1:
-            secondPage.style.classList.remove("hide");
-            firstPage.style.classList.add("hide");
+            //productPage.style
         break;
 
         case 2:
-            firstPage.style.classList.remove("hide");
-            secondPage.style.classList.add("hide");
+
         break;
     }
 }
