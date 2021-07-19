@@ -1,13 +1,20 @@
+/*
+<p>Modern luxury apparel for the working-class.</p>
+*/
+
 /*———————————————————————————————————————*/
 /* SECTION Imports                       */
 /*———————————————————————————————————————*/
 
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
 
 /*———————————————————————————————————————*/
 /* SECTION Elements                      */
 /*———————————————————————————————————————*/
+    
+body {animation: fadeIn 1s;}
 
 body, html {
     background-color: black;
@@ -25,6 +32,7 @@ body, html {
     /* NOTE: Background colors. */
     --background-color-1: rgb(17, 17, 17);
     --background-color-2: rgba(37, 33, 33, 0.25);
+    --background-color-3: white;
 
     /* NOTE: Text colors. */
     --text-color-1: white;
@@ -32,9 +40,13 @@ body, html {
     --text-color-3: rgba(255, 255, 255, 0.5);
 
     /* NOTE: Fonts. */
-    --font-family-1: ;
+    --font-family-1: 'Cormorant', serif;
     --font-family-2: 'Castoro', serif;
     --font-family-3: 'Sulphur Point', sans-serif;
+
+    /* NOTE: Borders. */
+    --border-1: 0.1em solid white;
+    --border-2: 0.1em solid rgba(255, 255, 255, 0.5);
 
     /* NOTE: Misc colors. */
     --blue: #14BDEB;
@@ -44,13 +56,90 @@ body, html {
 /* SECTION Classes                       */
 /*———————————————————————————————————————*/
 
-
+.hide {display: none;}
 
 /*———————————————————————————————————————*/
 /* SECTION Id's                          */
 /*———————————————————————————————————————*/
 
+/* SECTION: Title */
+#title {
+    width:     auto;
+    position:  absolute;
+    left:      50%;
+    top:       8em;
+    transform: translateX(-50%);
+}
 
+#title:hover {
+    cursor: pointer;
+}
+
+#title a {
+    text-decoration: none;
+}
+
+/* TODO: Re-organize everything. */
+#title img {
+    width:         8em;
+    height:        8em;
+    border:        var(--border-1);
+    border-radius: 50%;
+    left:          50%;
+    transform:     translateX(-50%);
+    bottom:        7.5em;
+    position:      absolute;
+}
+
+#title h1 {
+    font-family: var(--font-family-1);
+    color:       var(--text-color-1);
+    font-size:   3.5em;
+    text-align:  center;
+    user-select: none;
+    font-weight: 300;
+    position:    relative;
+}
+
+#title-buttons {
+    color:        var(--text-color-3);
+    position:     absolute;
+    width:        60em;
+    top:          16em;
+    left:         50%;
+    transform:    translateX(-50%);
+    border-left:  var(--border-1);
+    border-right: var(--border-1);
+
+    /* TODO: Moving bar | <- Title -> | UI. */
+    animation: barsMove 2s;
+    animation-delay:    2s;
+}
+
+#title-buttons ul {
+    list-style:   none;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+}
+
+#title-buttons li {
+    display: inline-block;
+    padding: 1em;
+}
+
+#title-buttons a {
+    font-family:     var(--font-family-1);
+    font-size:       2em;
+    color:           var(--text-color-3);
+    text-decoration: none;
+}
+
+#title-buttons a:hover {
+    border-bottom: var(--border-1);
+    border-top:    var(--border-1);
+    color:         var(--text-color-1);
+    cursor:        pointer;
+}
 
 /*———————————————————————————————————————*/
 /* SECTION Media Queries                 */
@@ -61,3 +150,14 @@ body, html {
 /*———————————————————————————————————————*/
 /* SECTION Keyframes                     */
 /*———————————————————————————————————————*/
+
+/* SECTION Page Transitions */
+@keyframes fadeIn {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes fadeOut {
+    0%   {opacity:1;}
+    100% {opacity:0;}
+}
