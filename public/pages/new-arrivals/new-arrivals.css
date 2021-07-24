@@ -162,15 +162,17 @@ body, html {
     cursor:        pointer;
 }
 
-/* NOTE: Clothing Grid */
+/* SECTION: Clothing Grid */
 #clothing-grid {
-    position:     absolute;
-    top:          25em;
-    left:         50%;
-    width:        60em;
-    transform:    translateX(-50%);
-    border-left:  var(--border-1);
-    border-right: var(--border-1);
+    position:       absolute;
+    top:            25em;
+    left:           50%;
+    width:          60em;
+    padding-bottom: 3em;
+    transform:      translateX(-50%);
+    border-left:    var(--border-1);
+    border-right:   var(--border-1);
+    border-bottom:  var(--border-1);
 }
 
 #grid-container {
@@ -178,9 +180,11 @@ body, html {
     grid-template-columns: auto auto auto;
     column-gap:            1em;
     row-gap:               1em;
-    position: relative;
-    padding-left: 5em;
+    position:              relative;
+    padding-left:          5em;
 }
+
+
 
 /*———————————————————————————————————————*/
 /* SECTION Media Queries                 */
