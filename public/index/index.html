@@ -9,118 +9,325 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <main>
-        <section id="page-1" class="pages">
+    <div id="landing-page">
+        <div id="announcements">
+            <h1>Get 25% off on your first purchase when you create an account.</h1>
+        </div>
 
-            <div id="announcements">
-                <h1>Get 25% off on your first purchase when you create an account! <a href="#">Sign up</a></h1>
+        <!--TODO: Sign Up / Log In HTML, CSS, JS-->
+        <div id="signup-login">
+            <ul>
+                <li><a onclick="buttons(7)">Sign Up</a></li>
+                <li><a onclick="buttons(8)">Log In</a></li>
+            </ul>
+        </div>
+
+        <div id="navbar">
+            <div id="title">
+                <a onclick="buttons(0)">
+                    <img src="images/holosphere.png">
+                    <h1>Astris Apparel</h1>
+                </a>
             </div>
-
-            <div id="signup-login">
+            
+            <div id="title-buttons">
                 <ul>
-                    <li><a href="/signup">Sign Up</a></li>
-                    <li><a href="/login">Log In</a></li>
+                    <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
+                    <li><a id="men" onclick="buttons(2)">Men</a></li>
+                    <li><a id="women" onclick="buttons(3)">Women</a></li>
+                    <li><a id="boys" onclick="buttons(4)">Boys</a></li>
+                    <li><a id="girls" onclick="buttons(5)">Girls</a></li>
+                    <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
                 </ul>
             </div>
 
-            <div id="navbar">
-                <div id="title">
-                    <a href="/index">
-                        <img src="images/holosphere.png">
-                        <h1>Astris Apparel</h1>
-                    </a>
-                </div>
+            <div id="search-bar">
+                <input type="text" placeholder="Search any product here." onkeydown="searchBar(event)">
                 
-                <div id="title-buttons">
-                    <ul>
-                        <li><a href="/new-arrivals">New Arrivals</a></li>
-                        <li><a href="/men">Men</a></li>
-                        <li><a href="/women">Women</a></li>
-                        <li><a href="/boys">Boys</a></li>
-                        <li><a href="/girls">Girls</a></li>
-                        <li><a href="/gender-neutral">Gender Neutral</a></li>
-                    </ul>
+                <ul id="product-list" class="hide">
+
+                    <div id="product-list-button">
+                        <a onclick="productToggle(1)"></a>
+                    </div>
+
+                    <li>
+                        <div class="product-test">
+                            <img src="images/suit.png" class="product-image">
+                            <label class="image-label" for="product-image">$400.00</label>
+                            <h1 class="title-test">Product Name</h1>
+                            <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="product-test">
+                            <img src="images/suit.png" class="product-image">
+                            <label class="image-label" for="product-image">$400.00</label>
+                            <h1 class="title-test">Product Name</h1>
+                            <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="product-test">
+                            <img src="images/suit.png" class="product-image">
+                            <label class="image-label" for="product-image">$400.00</label>
+                            <h1 class="title-test">Product Name</h1>
+                            <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- TODO: Figure out a better way to go about toggling the way the searchbar products look.
+                <ul id="product-list-toggle" class="hide">
+
+                    <div id="product-list-toggle-button">
+                        <a onclick="productToggle(2)"></a>
+                    </div>
+
+                    <li>
+                        <div class="product-test">
+                            <img src="images/suit.png" class="product-image">
+                            <label class="image-label" for="product-image">$400.00</label>
+                            <h1 class="title-test">Product Name</h1>
+                            <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="product-test">
+                            <img src="images/suit.png" class="product-image">
+                            <label class="image-label" for="product-image">$400.00</label>
+                            <h1 class="title-test">Product Name</h1>
+                            <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="product-test">
+                            <img src="images/suit.png" class="product-image">
+                            <label class="image-label" for="product-image">$400.00</label>
+                            <h1 class="title-test">Product Name</h1>
+                            <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
+                        </div>
+                    </li>
+                </ul>-->
+            </div>
+        </div>
+    </div>
+
+    <div id="new-arrivals-page" class="hide">
+        <div id="title">
+            <a onclick="buttons(0)">
+                <img src="arrivals-images/holosphere.png">
+            </a>
+                <h1>New Arrivals</h1>
+        </div>
+
+        <div id="title-buttons">
+            <ul>
+                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
+                <li><a id="men" onclick="buttons(2)">Men</a></li>
+                <li><a id="women" onclick="buttons(3)">Women</a></li>
+                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
+                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
+                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
+            </ul>
+        </div>
+
+        <div id="clothing-grid">
+            <div id="grid-container">
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Motorcycle Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
                 </div>
 
-                <div id="search-bar">
-                    <input type="text" placeholder="Search any product here." onkeydown="searchBar(event)">
-                    
-                    
-                    
-                    <ul id="product-list">
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <div id="product-list-button">
-                            <a onclick="productToggle(1)"></a>
-                        </div>
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <li>
-                            <div class="product-test">
-                                <img src="images/suit.png" class="product-image">
-                                <label class="image-label" for="product-image">$400.00</label>
-                                <h1 class="title-test">Product Name</h1>
-                                <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
-                            </div>
-                        </li>
+                <div class="grid-item">
+                    <img src="new-arrivals-images/utility-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <li>
-                            <div class="product-test">
-                                <img src="images/suit.png" class="product-image">
-                                <label class="image-label" for="product-image">$400.00</label>
-                                <h1 class="title-test">Product Name</h1>
-                                <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
-                            </div>
-                        </li>
+                <div class="grid-item">
+                    <img src="new-arrivals-images/utility-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <li>
-                            <div class="product-test">
-                                <img src="images/suit.png" class="product-image">
-                                <label class="image-label" for="product-image">$400.00</label>
-                                <h1 class="title-test">Product Name</h1>
-                                <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="grid-item">
+                    <img src="new-arrivals-images/utility-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                    <!-- TODO: Figure out a better way to go about toggling the way the searchbar products look.
-                    <ul id="product-list-toggle" class="hide">
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <div id="product-list-toggle-button">
-                            <a onclick="productToggle(2)"></a>
-                        </div>
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <li>
-                            <div class="product-test">
-                                <img src="images/suit.png" class="product-image">
-                                <label class="image-label" for="product-image">$400.00</label>
-                                <h1 class="title-test">Product Name</h1>
-                                <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
-                            </div>
-                        </li>
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <li>
-                            <div class="product-test">
-                                <img src="images/suit.png" class="product-image">
-                                <label class="image-label" for="product-image">$400.00</label>
-                                <h1 class="title-test">Product Name</h1>
-                                <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
-                            </div>
-                        </li>
+                <div class="grid-item">
+                    <img src="new-arrivals-images/utility-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
-                        <li>
-                            <div class="product-test">
-                                <img src="images/suit.png" class="product-image">
-                                <label class="image-label" for="product-image">$400.00</label>
-                                <h1 class="title-test">Product Name</h1>
-                                <p class="desc-test">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursu.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    -->
+                <div class="grid-item">
+                    <img src="new-arrivals-images/utility-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
 
+                <div class="grid-item">
+                    <img src="new-arrivals-images/utility-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="new-arrivals-images/motor-jacket.png" class="clothing-images">
+                    <h3 class="clothing-title">Utility Jacket for Men</h3>
+                    <p class="clothing-price">$49.99</p>
                 </div>
             </div>
+        </div>
+    </div>
 
-        </section>
-    </main>
+    <div id="men-page" class="hide">
+        <div id="title">
+            <a onclick="buttons(0)">
+                <img src="images/holosphere.png">
+            </a>
+                <h1>Men</h1>
+        </div>
+
+        <div id="title-buttons">
+            <ul>
+                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
+                <li><a id="men" onclick="buttons(2)">Men</a></li>
+                <li><a id="women" onclick="buttons(3)">Women</a></li>
+                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
+                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
+                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="women-page" class="hide">
+        <div id="title">
+            <a onclick="buttons(0)">
+                <img src="images/holosphere.png">
+            </a>
+                <h1>Women</h1>
+        </div>
+
+        <div id="title-buttons">
+            <ul>
+                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
+                <li><a id="men" onclick="buttons(2)">Men</a></li>
+                <li><a id="women" onclick="buttons(3)">Women</a></li>
+                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
+                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
+                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="boys-page" class="hide">
+        <div id="title">
+            <a onclick="buttons(0)">
+                <img src="images/holosphere.png">
+            </a>
+                <h1>Boys</h1>
+        </div>
+    
+        <div id="title-buttons">
+            <ul>
+                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
+                <li><a id="men" onclick="buttons(2)">Men</a></li>
+                <li><a id="women" onclick="buttons(3)">Women</a></li>
+                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
+                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
+                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="girls-page" class="hide">
+        <div id="title">
+            <a onclick="buttons(0)">
+                <img src="images/holosphere.png">
+            </a>
+                <h1>Girls</h1>
+        </div>
+
+        <div id="title-buttons">
+            <ul>
+                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
+                <li><a id="men" onclick="buttons(2)">Men</a></li>
+                <li><a id="women" onclick="buttons(3)">Women</a></li>
+                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
+                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
+                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gender-neutral-page" class="hide">
+        <div id="title">
+            <a onclick="buttons(0)">
+                <img src="images/holosphere.png">
+            </a>
+                <h1>Gender Neutral</h1>
+        </div>
+
+        <div id="title-buttons">
+            <ul>
+                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
+                <li><a id="men" onclick="buttons(2)">Men</a></li>
+                <li><a id="women" onclick="buttons(3)">Women</a></li>
+                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
+                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
+                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
