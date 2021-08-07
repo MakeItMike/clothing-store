@@ -13,15 +13,19 @@
 /*———————————————————————————————————————*/
 /* SECTION Elements                      */
 /*———————————————————————————————————————*/
-    
+	
 body {animation: fadeIn 1s;}
 
+html{overflow-y: none;}
+
 body, html {
-    background: black;
-    color:            var(--text-color-1);
-    width:            100%;
-    height:           100%;
-    overflow-x:       hidden;
+	background: black;
+	color:      var(--text-color-1);
+	width:      100%;
+	height:     100%;
+	overflow-x: hidden;
+	margin: 	0;
+	padding:    0;
 }
 
 /*———————————————————————————————————————*/
@@ -29,27 +33,28 @@ body, html {
 /*———————————————————————————————————————*/
 
 :root {
-    /* NOTE: Background colors. */
-    --background-color-1: rgb(0, 0, 0);
-    --background-color-2: rgba(37, 33, 33, 0.25);
-    --background-color-3: white;
+	/* NOTE: Background colors. */
+	--background-color-1: rgb(0, 0, 0);
+	--background-color-2: rgba(37, 33, 33, 0.25);
+	--background-color-3: white;
 
-    /* NOTE: Text colors. */
-    --text-color-1: white;
-    --text-color-2: black;
-    --text-color-3: rgba(255, 255, 255, 0.5);
+	/* NOTE: Text colors. */
+	--text-color-1: white;
+	--text-color-2: black;
+	--text-color-3: rgba(255, 255, 255, 0.5);
 
-    /* NOTE: Fonts. */
-    --font-family-1: 'Cormorant', serif;
-    --font-family-2: 'Castoro', serif;
-    --font-family-3: 'Sulphur Point', sans-serif;
+	/* NOTE: Fonts. */
+	--font-family-1: 'Cormorant', serif;
+	--font-family-2: 'Castoro', serif;
+	--font-family-3: 'Sulphur Point', sans-serif;
 
-    /* NOTE: Borders. */
-    --border-1: 0.1em solid white;
-    --border-2: 0.1em solid rgba(255, 255, 255, 0.5);
+	/* NOTE: Borders. */
+	--border-1: 0.1em solid white;
+	--border-2: 0.1em solid rgba(255, 255, 255, 0.5);
+	--border-3: 0.1em solid var(--blue);
 
-    /* NOTE: Misc colors. */
-    --blue: #14BDEB;
+	/* NOTE: Misc colors. */
+	--blue: #14BDEB;
 }
 
 /*———————————————————————————————————————*/
@@ -58,7 +63,13 @@ body, html {
 
 .hide {display: none;}
 
-/* SECTION: Search-Bar */
+.page {
+	position: relative;
+	top: 30em;
+	width: 100%;
+	animation: fadeIn 1s;
+}
+
 
 /*———————————————————————————————————————*/
 /* SECTION Id's                          */
@@ -67,7 +78,7 @@ body, html {
 /* SECTION: Scroll Bar */
 
 ::-webkit-scrollbar {
-    width: 0.75em;
+	width: 0.75em;
 }
 
 ::-webkit-scrollbar-track {
@@ -75,278 +86,358 @@ body, html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(34, 34, 34);
+	background: rgb(34, 34, 34);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color:rgb(27, 27, 27);
+	background-color:rgb(27, 27, 27);
 }
 
 /* SECTION: Landing Page */
 /* NOTE: Announcements */
 #announcements {
-    width:            100%;
-    height:           3.5em;
-    position:         absolute;
-    color:            var(--text-color-3);
-    background-color: var(--background-color-1);
-    font-family:      var(--font-family-1);
-    font-size:        0.65em;
+	width:            100%;
+	height:           3.5em;
+	position:         absolute;
+	color:            var(--text-color-3);
+	background-color: var(--background-color-1);
+	font-family:      var(--font-family-1);
+	font-size:        0.65em;
 }
 
 #announcements h1 {
-    margin:      0.5em;
+	margin:      0.5em;
 	font-weight: 400;
-    margin-left: 1em;
+	margin-left: 1em;
 	position: 	 relative;
 	bottom:      0.25em;
 }
 
-/* SECTION: Signup Login Box */
+#announcements a {
+	text-decoration: underline;
+	transition: 0.25s;
+}
+
+#announcements a:hover {
+	cursor: pointer;
+	color:  var(--text-color-1);
+}
+
+/* NOTE: Top Bar */
+#topbar {
+	position: relative;
+	top: 5em;
+}
+
+/* NOTE: Signup Login Box */
 #signup-login {
-    position:    absolute;
-    right:       2em;
-    top:         2em;
-    z-index:     1;
-    font-family: var(--font-family-1);
+	position:    absolute;
+	right:       2em;
+	top:         2em;
+	z-index:     1;
+	font-family: var(--font-family-1);
 }
 
 #signup-login ul {
-    list-style:   none;
-    padding-left: 0;
-    margin:       none;
+	list-style:   none;
+	padding-left: 0;
+	margin:       none;
 }
 
 #signup-login li {
-    display: inline-block;
-    padding: 1em;
+	display: inline-block;
+	padding: 1em;
 }
 
 #signup-login a {
-    text-decoration: none;
-    color:           var(--text-color-3);
-    font-size:       1.5em;
+	text-decoration: none;
+	color:           var(--text-color-3);
+	font-size:       1.5em;
 }
 
 #signup-login a:hover {
-    color:  var(--text-color-1);
-    cursor: pointer;
+	color:  var(--text-color-1);
+	cursor: pointer;
 }
 
-/* SECTION: Nav-Bar */
-#navbar {
-    width:    100%;
-    height:   15em;
-    top:      2.25em;
-    padding:  2em;
-    position: absolute;
-    z-index:  0;
-}
-
-/* SECTION: Search-Bar */
-#navbar input[type=text] {
-    padding:       6px;
-    border:        none;
-    border-bottom: var(--border-1);
-    width:         30em;
-    color:         var(--text-color-1);
-    background:    none;
-    top:           1em;
-    left:          50%;
-    transform:     translateX(-50%);
-    top:           25em;
-    position:      absolute;
-    font-size:     1em;
-    outline:       none;
-    text-align:    center;
-}
-
-#navbar input:focus {
-    border-bottom: 0.1em solid var(--blue);
-}
-
-#product-list {
-    width:            30em;
-    padding:          1em;
-    height:           auto;
-    position:         absolute;
-    left:             50%;
-    transform:        translateX(-50%);
-    top:              26.5em;
-    background-color: var(--background-color-2);
-    border:           var(--border-2);
-    list-style:       none;
-}
-
-/* NOTE: !!!TESTING!!! */
-    #product-list li {
-        border-bottom: var(--border-2);
-        color:         var(--text-color-3);
-    }
-
-    #product-list li:hover {
-        color:  var(--text-color-1);
-        cursor: pointer;
-    }
-
-    #product-list-button a {
-        width:    1em;
-        height:   1em;
-        position: absolute;
-        right:    0em;
-        top: -0.05em;
-        border-left: var(--border-2);
-        border-bottom: var(--border-2);
-        z-index:  1;
-    }
-
-    /* NOTE: This is to re-arrange the displayed products in the search like this: | | | . */
-    #product-list-button a:hover {
-        background-color: var(--background-color-3);
-    }
-
-    .product-image {
-        width:            10em;
-        height:           10em;
-        position:         relative;
-        left:             15em;
-        top:              1em;
-        padding:          1em;
-        border:           var(--border-1);
-        background-color: var(--background-color-2);
-    }
-/* TODO: Figure out a good styling for the price-tag! */
-    .image-label {
-        position:      relative;
-        top:           2.8em;
-        display:       inline-block;
-        width:         10em;
-        left:          2.55em;
-        text-align:    center;
-        border-left:   var(--border-1);
-        border-right:  var(--border-1);
-        border-bottom: var(--border-1);
-        padding:       1em;
-    }
-
-    .title-test {
-        font-family: var(--font-family-3);
-    }
-
-    .desc-test {
-        font-family: var(--font-family-2);
-    }
-
-/* NOTE: !!!TESTING!!! */
-
-
-/* SECTION: Title */
+/* NOTE: Title */
 #title {
-    width:     100%;
-    position:  absolute;
-    left:      50%;
-    top:       7.5em;
-    transform: translateX(-50%);
+	width:     100%;
+	position:  absolute;
+	left:      50%;
+	top:       7.5em;
+	transform: translateX(-50%);
 }
 
 #title:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 #title a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 /* TODO: Re-organize everything. */
 #title img {
-    width:         8em;
-    height:        8em;
-    border:        var(--border-1);
-    border-radius: 50%;
-    left:          50%;
-    transform:     translateX(-50%);
-    bottom:        7.5em;
-    position:      absolute;
+	width:         8em;
+	height:        8em;
+	border:        var(--border-1);
+	border-radius: 50%;
+	left:          50%;
+	transform:     translateX(-50%);
+	bottom:        7.5em;
+	position:      absolute;
 }
 
 #title h1 {
-    font-family: var(--font-family-1);
-    color:       var(--text-color-1);
-    font-size:   3.5em;
-    text-align:  center;
-    user-select: none;
-    font-weight: 300;
+	font-family: var(--font-family-1);
+	color:       var(--text-color-1);
+	font-size:   3.5em;
+	text-align:  center;
+	user-select: none;
+	font-weight: 300;
+	transition:  0.25s;
 }
 
 /* NOTE: Button Box */
 #button-box {
-    width:     66em;
-    position:  absolute;
-    top:       14em;
-    left:      50%;
-    height:    6em;
-    transform: translate(-50%);
+	width:     66em;
+	position:  absolute;
+	top:       14em;
+	left:      50%;
+	height:    6em;
+	transform: translate(-50%);
 }
 
 #moving-bars {
-    position:     absolute;
-    width:        66em;
-    height:       6em;
-    left:         50%;
-    transform:    translateX(-50%);
-    border-left:  var(--border-1);
-    border-right: var(--border-1);
-    animation:    barsMove 0.5s;
+	position:     absolute;
+	width:        66em;
+	height:       6em;
+	left:         50%;
+	transform:    translateX(-50%);
+	border-left:  var(--border-1);
+	border-right: var(--border-1);
+	animation:    barsMove 0.5s;
 }
 
 #title-buttons {
-    color:      var(--text-color-3);
-    position:   absolute;
-    width:      66em;
-    bottom:     1.5em;
-    left:       50%;
-    text-align: center;
-    transform:  translate(-50%);
-    animation:  fadeIn 4s;
+	color:      var(--text-color-3);
+	position:   absolute;
+	width:      66em;
+	bottom:     1.5em;
+	left:       50%;
+	text-align: center;
+	transform:  translate(-50%);
+	animation:  fadeIn 4s;
 }
 
 #title-buttons a {
-    font-family:     var(--font-family-1);
-    font-size:       2em;
-    color:           var(--text-color-3);
-    text-decoration: none;
-    padding:         1em;
-    transition:      0.5s;
+	font-family:     var(--font-family-1);
+	font-size:       2em;
+	color:           var(--text-color-3);
+	text-decoration: none;
+	padding:         1em;
+	transition:      0.5s;
 
 }
 
 #title-buttons a:hover {
-    color:  var(--text-color-1);
-    cursor: pointer;
+	color:  var(--text-color-1);
+	cursor: pointer;
+}
+
+/* NOTE: Search-Bar */
+#search-bar {
+	position: relative;
+	bottom: 3em;
+}
+
+#search-bar input {
+	padding:       6px;
+	border:        none;
+	border-bottom: var(--border-1);
+	width:         30em;
+	color:         var(--text-color-1);
+	background:    none;
+	left:          50%;
+	transform:     translateX(-50%);
+	top:           25em;
+	position:      absolute;
+	font-size:     1em;
+	outline:       none;
+	text-align:    center;
+}
+
+#search-bar input:focus {
+	border-bottom: var(--border-3);
 }
 
 /* SECTION: New Arrivals */
 
-/* NOTE: Clothing Grid */
-#clothing-grid {
-    position:       absolute;
-    top:            25em;
-    left:           50%;
-    width:          60em;
-    padding-bottom: 3em;
-    transform:      translateX(-50%);
-    border-left:    var(--border-1);
-    border-right:   var(--border-1);
-    border-bottom:  var(--border-1);
+/* NOTE: Clothing Table */
+#clothing-table {
+	width:     66em;
+	position:  relative;
+	left:      50%;
+	height:    6em;
+	transform: translate(-50%);
 }
 
-#grid-container {
-    display:               grid;
-    grid-template-columns: auto auto auto;
-    column-gap:            1em;
-    row-gap:               1em;
-    position:              relative;
-    padding-left:          5em;
+#clothing-table td {
+	width: 10em;
+	height: 10em;
+	padding: 2em;
+}
+
+/* NOTE: Clothing Numbers */
+#clothing-1 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-2 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-3 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-4 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-5 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-6 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-7 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-8 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-9 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-10 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-11 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-12 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-13 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-14 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-15 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-16 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-17 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-18 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-19 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-20 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-21 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-22 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-23 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-24 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-25 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-26 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-27 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-28 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-29 {
+	background-image: url(images/utility-jacket.png);
+	background-repeat: no-repeat;
+}
+
+#clothing-30 {
+	background-image: url(images/motor-jacket.png);
+	background-repeat: no-repeat;
 }
 
 /*———————————————————————————————————————*/
@@ -354,18 +445,18 @@ body, html {
 /*———————————————————————————————————————*/
 
 @media screen and (max-width: 1000px) {
-    #title h1 {
-        display: none;
-    }
+	#title h1 {
+		display: none;
+	}
 
-    #title img {
-        width:    6em;
-        height:   6em;
-        position: absolute;
-        left:     2em;
-        top:      2em;
-    }
-    
+	#title img {
+		width:    6em;
+		height:   6em;
+		position: absolute;
+		left:     2em;
+		top:      2em;
+	}
+	
 }
 
 /*———————————————————————————————————————*/
@@ -374,21 +465,21 @@ body, html {
 
 /* SECTION Page Transitions */
 @keyframes fadeIn {
-    0%   {opacity:0;}
-    100% {opacity:1;}
+	0%   {opacity:0;}
+	100% {opacity:1;}
 }
 
 @keyframes fadeOut {
-    0%   {opacity:1;}
-    100% {opacity:0;}
+	0%   {opacity:1;}
+	100% {opacity:0;}
 }
 
 @keyframes barsMove {
-    0%   {width: 0;}
-    100% {width: 66em;}
+	0%   {width: 0;}
+	100% {width: 66em;}
 }
 
 @keyframes textColor {
-    0%   {color: var(--text-color-3);}
-    100% {color: var(--text-color-1);}
+	0%   {color: var(--text-color-3);}
+	100% {color: var(--text-color-1);}
 }
