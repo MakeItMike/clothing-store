@@ -38,7 +38,11 @@ let btnDebounce = false;
 
 function buttons(page) {
     if(!btnDebounce) {
-        let landing       = document.getElementById("landing-page")
+		// H1
+		let h1 = document.getElementById("title-name");
+
+		// Pages
+        // let landing       = document.getElementById("landing-page");
         let newArrivals   = document.getElementById("new-arrivals-page");
         let men           = document.getElementById("men-page");
         let women         = document.getElementById("women-page");
@@ -50,7 +54,10 @@ function buttons(page) {
 
         switch(page) {
             case 0: // Landing
-				landing.classList.remove("hide");
+				// Changes H1
+				h1.innerHTML = "Astris Apparel";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.add("hide");
 				women.classList.add("hide");
@@ -60,7 +67,10 @@ function buttons(page) {
             break;
 
             case 1: // New Arrivals
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "New Arrivals";
+
+				// Changes Page
 				newArrivals.classList.remove("hide");
 				men.classList.add("hide");
 				women.classList.add("hide");
@@ -70,7 +80,10 @@ function buttons(page) {
             break;
 
             case 2: // Men
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "Men";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.remove("hide");
 				women.classList.add("hide");
@@ -80,7 +93,10 @@ function buttons(page) {
             break;
 
             case 3: // Women
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "Women";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.add("hide");
 				women.classList.remove("hide");
@@ -90,7 +106,10 @@ function buttons(page) {
             break;
 
             case 4: // Boys
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "Boys";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.add("hide");
 				women.classList.add("hide");
@@ -100,7 +119,10 @@ function buttons(page) {
             break;
 
             case 5: // Girls
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "Girls";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.add("hide");
 				women.classList.add("hide");
@@ -110,7 +132,10 @@ function buttons(page) {
             break;
 
             case 6: // Gender Neutral
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "Gender Neutral";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.add("hide");
 				women.classList.add("hide");
@@ -120,7 +145,10 @@ function buttons(page) {
             break;
 
             case 7: // Sign Up
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "Sign Up";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.add("hide");
 				women.classList.add("hide");
@@ -132,7 +160,10 @@ function buttons(page) {
             break;
 
             case 8: // Log In
-				landing.classList.add("hide");
+				// Changes H1
+				h1.innerHTML = "Log In";
+
+				// Changes Page
 				newArrivals.classList.add("hide");
 				men.classList.add("hide");
 				women.classList.add("hide");

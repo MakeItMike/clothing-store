@@ -26,19 +26,23 @@
             <div id="title">
                 <a onclick="buttons(0)">
                     <img src="images/holosphere.png">
-                    <h1>Astris Apparel</h1>
+                    <h1 id="title-name">Astris Apparel</h1>
                 </a>
             </div>
             
-            <div id="title-buttons">
-                <ul>
-                    <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
-                    <li><a id="men" onclick="buttons(2)">Men</a></li>
-                    <li><a id="women" onclick="buttons(3)">Women</a></li>
-                    <li><a id="boys" onclick="buttons(4)">Boys</a></li>
-                    <li><a id="girls" onclick="buttons(5)">Girls</a></li>
-                    <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
-                </ul>
+            <div id="button-box">
+				<div id="moving-bars"></div>
+
+				<table id="title-buttons" onload="buttonWait()">
+					<tr>
+						<td><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></td>
+						<td><a id="men" onclick="buttons(2)">Men</a></td>
+						<td><a id="women" onclick="buttons(3)">Women</a></td>
+						<td><a id="boys" onclick="buttons(4)">Boys</a></td>
+						<td><a id="girls" onclick="buttons(5)">Girls</a></td>
+						<td><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></td>
+					</tr>
+				</table>
             </div>
 
             <div id="search-bar">
@@ -117,23 +121,6 @@
     </div>
 
     <div id="new-arrivals-page" class="hide">
-        <div id="title">
-            <a onclick="buttons(0)">
-                <img src="arrivals-images/holosphere.png">
-            </a>
-                <h1>New Arrivals</h1>
-        </div>
-
-        <div id="title-buttons">
-            <ul>
-                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
-                <li><a id="men" onclick="buttons(2)">Men</a></li>
-                <li><a id="women" onclick="buttons(3)">Women</a></li>
-                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
-                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
-                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
-            </ul>
-        </div>
 
         <div id="clothing-grid">
             <div id="grid-container">
@@ -231,103 +218,18 @@
     </div>
 
     <div id="men-page" class="hide">
-        <div id="title">
-            <a onclick="buttons(0)">
-                <img src="images/holosphere.png">
-            </a>
-                <h1>Men</h1>
-        </div>
-
-        <div id="title-buttons">
-            <ul>
-                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
-                <li><a id="men" onclick="buttons(2)">Men</a></li>
-                <li><a id="women" onclick="buttons(3)">Women</a></li>
-                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
-                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
-                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
-            </ul>
-        </div>
     </div>
 
     <div id="women-page" class="hide">
-        <div id="title">
-            <a onclick="buttons(0)">
-                <img src="images/holosphere.png">
-            </a>
-                <h1>Women</h1>
-        </div>
-
-        <div id="title-buttons">
-            <ul>
-                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
-                <li><a id="men" onclick="buttons(2)">Men</a></li>
-                <li><a id="women" onclick="buttons(3)">Women</a></li>
-                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
-                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
-                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
-            </ul>
-        </div>
     </div>
 
     <div id="boys-page" class="hide">
-        <div id="title">
-            <a onclick="buttons(0)">
-                <img src="images/holosphere.png">
-            </a>
-                <h1>Boys</h1>
-        </div>
-    
-        <div id="title-buttons">
-            <ul>
-                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
-                <li><a id="men" onclick="buttons(2)">Men</a></li>
-                <li><a id="women" onclick="buttons(3)">Women</a></li>
-                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
-                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
-                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
-            </ul>
-        </div>
     </div>
 
     <div id="girls-page" class="hide">
-        <div id="title">
-            <a onclick="buttons(0)">
-                <img src="images/holosphere.png">
-            </a>
-                <h1>Girls</h1>
-        </div>
-
-        <div id="title-buttons">
-            <ul>
-                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
-                <li><a id="men" onclick="buttons(2)">Men</a></li>
-                <li><a id="women" onclick="buttons(3)">Women</a></li>
-                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
-                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
-                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
-            </ul>
-        </div>
     </div>
 
     <div id="gender-neutral-page" class="hide">
-        <div id="title">
-            <a onclick="buttons(0)">
-                <img src="images/holosphere.png">
-            </a>
-                <h1>Gender Neutral</h1>
-        </div>
-
-        <div id="title-buttons">
-            <ul>
-                <li><a id="new-arrivals" onclick="buttons(1)">New Arrivals</a></li>
-                <li><a id="men" onclick="buttons(2)">Men</a></li>
-                <li><a id="women" onclick="buttons(3)">Women</a></li>
-                <li><a id="boys" onclick="buttons(4)">Boys</a></li>
-                <li><a id="girls" onclick="buttons(5)">Girls</a></li>
-                <li><a id="gender-neutral" onclick="buttons(6)">Gender Neutral</a></li>
-            </ul>
-        </div>
     </div>
 </body>
 </html>
