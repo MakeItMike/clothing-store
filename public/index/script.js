@@ -10,26 +10,6 @@ console.log("%cHello! Let me know how I can improve by dropping me an email at: 
 // SECTION Variables                     //
 //———————————————————————————————————————//
 
-// TODO: In the future do a JSON file for the productList instead of this variable.
-// NOTE: !!!TEST VARIABLE!!!
-let productList = {
-	product1: {
-		name: "Apple",
-		desc: "A delicious fruit."
-	},
-
-	product2: {
-		name: "Orange",
-		desc: "A delicious fruit."
-	},
-
-	product2: {
-		name: "Pear",
-		desc: "A delicious fruit."
-	}
-};
-// console.log("Product name: " + productList.product1.name + "\n" + "Product desc: " + productList.product1.desc);
-
 let btnDebounce = false;
 
 //———————————————————————————————————————//
@@ -42,10 +22,9 @@ function buttons(page) {
 		let h1 = document.getElementById("title-name");
 		h1.style.opacity = 0;
 
-		setTimeout(fadeIn => {
-				h1.style.opacity = 1;
-						// Pages
-			// let landing       = document.getElementById("landing-page");
+		setTimeout(() => {
+			h1.style.opacity = 1;
+			// Pages
 			let newArrivals   = document.getElementById("new-arrivals-page");
 			let men           = document.getElementById("men-page");
 			let women         = document.getElementById("women-page");
